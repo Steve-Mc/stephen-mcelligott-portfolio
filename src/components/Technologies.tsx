@@ -2,8 +2,8 @@
 import { Box, Heading, Stack } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { TechSection } from "./TechSection";
-import { backendTech } from "@/data/backendTech";
-import { frontendTech } from "@/data/frontendTech";
+import { backendTech } from "@/data/backendTech__temp";
+import { frontendTech } from "@/data/frontendTech__temp";
 import { utilitiesTech } from "@/data/utilitiesTech";
 
 const MotionStack = motion(Stack);
