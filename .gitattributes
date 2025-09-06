@@ -1,0 +1,21 @@
+* text=eol=lf
+
+*.ts      text
+*.tsx     text
+*.js      text
+*.jsx     text
+*.json    text
+*.css     text
+*.scss    text
+*.html    text
+*.md      text
+
+*.png     binary
+*.jpg     binary
+*.jpeg    binary
+*.gif     binary
+*.ico     binary
+*.svg     binary
+*.webp    binary
+*.pdf     binary
+*.zip     binary
