@@ -3,7 +3,7 @@ import type { Tech } from "@/types/tech";
 import typeScriptIcon from "@/assets/typeScriptIcon.png";
 import framerMotionIcon from "@/assets/framerMotionIcon.svg";
 import chakraUiIcon from "@/assets/chakraUiIcon.png";
-import html5Icon from "@/assets/html5.svg";
+import html5Icon from "@/assets/HTML5.svg";
 import css3Icon from "@/assets/CSS3.svg";
 
 export const frontendTech: Tech[] = [
