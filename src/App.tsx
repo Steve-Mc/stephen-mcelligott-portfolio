@@ -2,7 +2,7 @@ import "./App.css";
 import Hero from "./components/Hero";
 import { Spacer, Stack } from "@chakra-ui/react";
 import { Projects } from "@/components/Projects";
-import { Technologies } from "./components/Technologies";
+import { Technologies } from "@/components/Technologies";
 import SEO from "./SEO";
 
 const App: React.FC = () => {
