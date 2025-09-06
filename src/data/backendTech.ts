@@ -5,7 +5,7 @@ import typeScriptIcon from "@/assets/typeScriptIcon.png";
 import mysqlIcon from "@/assets/mysqlIcon.svg";
 import redisIcon from "@/assets/redisIcon.svg";
 import prismaIcon from "@/assets/prismaIcon.svg";
-import mongoIcon from "@/assets/mongoDb.svg";
+import mongoIcon from "@/assets/MongoDB.svg";
 import webpackIcon from "@/assets/webpackIcon.svg";
 import expressIcon from "@/assets/expressIcon.svg";
 
