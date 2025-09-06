@@ -3,12 +3,15 @@ import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
 import react from "@vitejs/plugin-react";
 import tsconfigPaths from "vite-tsconfig-paths";
 import { visualizer } from "rollup-plugin-visualizer";
-import path from "path";
+import checker from "vite-plugin-checker";
 
 export default defineConfig(({ mode }) => ({
   plugins: [
     react(),
     tsconfigPaths(),
+    checker({
+      typescript: true,
+    }),
     mode === "analyze" && visualizer({ filename: "stats.html", open: true }),
     ViteImageOptimizer({
       logStats: true,
@@ -74,10 +77,5 @@ export default defineConfig(({ mode }) => ({
       },
     },
     chunkSizeWarningLimit: 1000,
-  },
-  resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "src"),
-    },
   },
 }));
