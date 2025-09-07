@@ -4,8 +4,18 @@ import { Spacer, Stack } from "@chakra-ui/react";
 import { Projects } from "@/components/Projects";
 import { Technologies } from "@/components/Technologies";
 import SEO from "./SEO";
+import { useEffect } from "react";
 
 const App: React.FC = () => {
+  useEffect(() => {
+    const html = document.documentElement;
+    if (html.dataset.initialBg) {
+      html.style.backgroundColor = "";
+      html.style.backgroundImage = "";
+      html.style.backgroundSize = "";
+      delete html.dataset.initialBg;
+    }
+  }, []);
   return (
     <>
       <SEO

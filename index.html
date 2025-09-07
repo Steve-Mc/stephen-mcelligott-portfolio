@@ -1,6 +1,26 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <script>
+      (function () {
+        try {
+          const stored = localStorage.getItem("theme");
+          const systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+          const theme = stored || (systemDark ? "dark" : "light");
+          const html = document.documentElement;
+
+          html.classList.add(theme);
+
+          html.style.backgroundColor = theme === "dark" ? "#09090B" : "#ffffff";
+
+          html.style.backgroundImage =
+            "linear-gradient(90deg, rgba(89,88,88,0.05) 1px, transparent 1px), " +
+            "linear-gradient(rgba(89,88,88,0.05) 1px, transparent 1px)";
+          html.style.backgroundSize = "15px 15px";
+          html.dataset.initialBg = "true";
+        } catch (e) {}
+      })();
+    </script>
     <meta charset="UTF-8" />
     <!-- Dark mode favicon -->
     <link
