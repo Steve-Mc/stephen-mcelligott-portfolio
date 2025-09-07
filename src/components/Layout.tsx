@@ -19,6 +19,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   const src = theme === "dark" ? darkSrc : lightSrc;
   return (
     <Flex direction="column" minH="100vh">
+      <Box display="none">
+        <Image src={darkSrc} alt="preload dark logo" />
+        <Image src={lightSrc} alt="preload light logo" />
+      </Box>
       <Flex as="header" p={4} mb={8} bg="headerBg" align="center">
         <MotionImage
           src={src}
