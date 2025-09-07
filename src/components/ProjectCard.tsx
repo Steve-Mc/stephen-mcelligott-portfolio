@@ -16,6 +16,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, im
   return (
     <MotionCard
       maxW="100%"
+      borderRadius={"xl"}
       initial={{
         opacity: 0,
         y: 50,
@@ -31,7 +32,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, im
         transition: { type: "spring", stiffness: 400, damping: 20 },
       }}
     >
-      <Image src={image} alt={title} />
+      <Image src={image} alt={title} borderTopRadius={"xl"} />
       <Card.Body gap="2">
         <Card.Title cursor="default">{title}</Card.Title>
         <Card.Description cursor="default">{description}</Card.Description>
