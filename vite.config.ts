@@ -18,9 +18,9 @@ export default defineConfig(({ mode }) => ({
       logStats: true,
       ansiColors: true,
       test: /\.(jpe?g|png|gif|tiff|webp|svg|avif)$/i,
-      exclude: undefined,
       include: undefined,
       includePublic: true,
+      exclude: ["favicon.svg"],
       svg: {
         multipass: true,
         plugins: [
