@@ -60,9 +60,6 @@ const Hero: React.FC = () => {
         w="100%"
         align="center"
         justify={{ base: "center", md: "flex-end" }}
-        whileTap={{
-          scale: 0.95,
-        }}
         initial={{ x: 500, opacity: 0, filter: "drop-shadow(0 0 0px teal)" }}
         animate={{ x: 0, opacity: 1 }}
         transition={{
@@ -78,6 +75,9 @@ const Hero: React.FC = () => {
           py={4}
           fontSize="md"
           fontWeight="bold"
+          whileTap={{
+            scale: 0.95,
+          }}
           whileHover={{
             scale: 1.05,
             boxShadow: "0 8px 20px rgba(66, 153, 225, 0.6)",
