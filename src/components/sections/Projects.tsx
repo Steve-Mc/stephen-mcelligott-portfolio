@@ -1,9 +1,10 @@
 import { Box, Heading, Flex, Stack } from "@chakra-ui/react";
 import { motion } from "framer-motion";
-import { ProjectCard } from "./ProjectCard";
+import { ProjectCard } from "@/components/ui/ProjectCard";
 import type { Project } from "@/types/project";
 import { projects } from "@/data/projects";
 
+// let chakra infer the type
 const MotionStack = motion(Stack);
 
 export const Projects: React.FC = () => {

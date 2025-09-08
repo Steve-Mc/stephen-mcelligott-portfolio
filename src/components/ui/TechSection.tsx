@@ -1,8 +1,8 @@
-// src/components/TechSection.tsx
 import { Box, Text, Flex, HStack, Card, Avatar } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import type { Tech } from "@/types/tech";
 
+// let chakra infer the type
 const MotionCard = motion(Card.Root);
 
 interface TechSectionProps {
