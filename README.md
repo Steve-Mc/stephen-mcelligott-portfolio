@@ -1,69 +1,109 @@
-# React + TypeScript + Vite
+# My Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive portfolio website built with **React**, **Vite**, **Chakra UI**, and **Framer Motion**, showcasing projects, technologies, and a contact form with animated interactions.
 
-Currently, two official plugins are available:
+## Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Features](#features)
+- [Technologies](#technologies)
+- [Folder Structure](#folder-structure)
+- [Available Scripts](#available-scripts)
+- [Custom Hooks](#custom-hooks)
+- [UI Components](#ui-components)
+- [Animations](#animations)
+- [Contact Form](#contact-form)
+- [License](#license)
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Responsive hero section with animated text and buttons
+- Projects showcase with `ProjectCard` component
+- Technology section with reusable `TechSection` components
+- Animated Chakra UI components using Framer Motion (`MotionButton`, `MotionFlex`, `MotionStack`)
+- Contact form with validation and toast notifications
+- Smooth modal animations for the contact dialog
+- Serverless function to send contact message
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Technologies
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- **React** + **TypeScript**
+- **Vite** for fast build tooling
+- **Chakra UI** for component styling and responsive design
+- **Framer Motion** for animations
+- **React Hot Toast** for notifications
+- **React Icons** for icons
+- **Node/Express API** (optional backend for contact form)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Folder Structure
+
+```
+src/
+├─ api/
+│  └─ sendMessage.ts
+├─ chakra/
+│  ├─ theme.ts
+│  └─ components/
+│     ├─ MotionButton.tsx
+│     ├─ MotionFlex.tsx
+│     └─ MotionStack.tsx
+├─ components/
+│  ├─ layout/
+│  │  └─ Layout.tsx
+│  ├─ sections/
+│  │  ├─ Header.tsx
+│  │  ├─ Hero.tsx
+│  │  ├─ Projects.tsx
+│  │  └─ Technologies.tsx
+│  └─ ui/
+│     ├─ ContactDialog.tsx
+│     ├─ ProjectCard.tsx
+│     └─ TechSection.tsx
+├─ hooks/
+│  └─ useContactForm.ts
+├─ types/
+├─ css/
+│  └─ animations.css
+└─ App.tsx
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Available Scripts
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+| Command           | Description                                 |
+| ----------------- | ------------------------------------------- |
+| `npm run dev`     | Start Vite development server               |
+| `npm run build`   | TypeScript build and Vite production bundle |
+| `npm run lint`    | Run ESLint checks                           |
+| `npm run vercel`  | Start Vercel development server             |
+| `npm run preview` | Preview production build                    |
+| `npm run prepare` | Setup Husky git hooks                       |
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Custom Hooks
+
+- `useContactForm` → Handles form state, validation, and reset logic
+- Hooks are located in `src/hooks/`
+
+## UI Components
+
+- `MotionButton`, `MotionFlex`, `MotionStack` → Animated Chakra primitives
+- `ContactDialog` → Animated contact modal with validation
+- `ProjectCard` → Displays project information
+- `TechSection` → Displays technologies used
+
+## Animations
+
+- Framer Motion powers all component animations
+- CSS keyframes are used for dialog/backdrop animations
+- Hero and buttons "pop in" with scale and spring animations
+
+## Contact Form
+
+- Validates name, email, and message fields
+- Shows real-time errors when fields are touched
+- Submits to `/api/sendMessage` and shows success/error toast notifications
+- Loading state handled via loading state in Hero
+
+## License
+
+MIT License © Stephen McElligott
+
+---
