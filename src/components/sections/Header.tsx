@@ -1,5 +1,3 @@
-// src/components/Layout.tsx
-
 import React from "react";
 import { Box, Flex, IconButton, Spacer, Image } from "@chakra-ui/react";
 import { TiAdjustBrightness } from "react-icons/ti";
@@ -12,7 +10,7 @@ const MotionImage = motion(Image);
 
 export const Header: React.FC = () => {
   const { theme, setTheme } = useTheme();
-  const src = theme === "dark" ? darkSrc : lightSrc;
+  const src: string = theme === "dark" ? darkSrc : lightSrc;
   return (
     <>
       <Box display="none">

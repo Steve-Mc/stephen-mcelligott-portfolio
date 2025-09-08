@@ -1,11 +1,12 @@
 // src/components/Technologies.tsx
 import { Box, Heading, Stack } from "@chakra-ui/react";
 import { motion } from "framer-motion";
-import { TechSection } from "./TechSection";
+import { TechSection } from "@/components/ui/TechSection";
 import { backendTech } from "@/data/backendTech";
 import { frontendTech } from "@/data/frontendTech";
 import { utilitiesTech } from "@/data/utilitiesTech";
 
+// let chakra infer the type
 const MotionStack = motion(Stack);
 
 export const Technologies: React.FC = () => (
