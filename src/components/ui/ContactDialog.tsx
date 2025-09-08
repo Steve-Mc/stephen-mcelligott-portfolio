@@ -19,12 +19,7 @@ export const ContactDialog: React.FC<ContactDialogProps> = ({
   loading,
   onSubmit,
 }) => (
-  <Dialog.Root
-    open={isOpen}
-    onOpenChange={(e) => onClose()}
-    placement="center"
-    motionPreset="scale"
-  >
+  <Dialog.Root open={isOpen} onOpenChange={() => onClose()} placement="center" motionPreset="scale">
     <Portal>
       <Dialog.Backdrop
         _open={{ animation: "backdrop-fade-in 800ms ease-out" }}
