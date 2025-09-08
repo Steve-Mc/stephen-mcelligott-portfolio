@@ -1,14 +1,14 @@
-import "./App.css";
-import Hero from "./components/Hero";
+import "@/css/App.css";
+import { Hero } from "@/components/sections/Hero";
 import { Spacer, Stack } from "@chakra-ui/react";
-import { Projects } from "@/components/Projects";
-import { Technologies } from "@/components/Technologies";
+import { Projects } from "@/components/sections/Projects";
+import { Technologies } from "@/components/sections/Technologies";
 import SEO from "./SEO";
 import { useEffect } from "react";
 
 const App: React.FC = () => {
   useEffect(() => {
-    const html = document.documentElement;
+    const html: HTMLHtmlElement = document.documentElement as HTMLHtmlElement;
     if (html.dataset.initialBg) {
       html.style.backgroundColor = "";
       html.style.backgroundImage = "";

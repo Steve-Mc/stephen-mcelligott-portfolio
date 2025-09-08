@@ -1,8 +1,8 @@
-// components/ProjectCard.tsx
 import { Card, Image, Button } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { LuExternalLink } from "react-icons/lu";
 
+// let chakra infer the type
 const MotionCard = motion(Card.Root);
 
 interface ProjectCardProps {
