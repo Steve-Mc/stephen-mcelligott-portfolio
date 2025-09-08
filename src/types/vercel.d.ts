@@ -1,5 +1,5 @@
 export interface VercelRequest {
-  body?: any;
+  body?: T;
   method?: string;
   query?: Record<string, string>;
   headers?: Record<string, string>;
@@ -7,6 +7,6 @@ export interface VercelRequest {
 
 export interface VercelResponse {
   status: (code: number) => VercelResponse;
-  json: (data: any) => void;
-  send?: (data: any) => void;
+  json: (data: T) => void;
+  send?: (data: T) => void;
 }
