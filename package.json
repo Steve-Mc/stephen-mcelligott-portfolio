@@ -7,6 +7,7 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "npx eslint .",
+    "vercel": "vercel dev",
     "preview": "vite preview",
     "prepare": "husky"
   },
@@ -18,13 +19,16 @@
     "framer-motion": "^12.23.12",
     "motion": "^12.23.12",
     "next-themes": "^0.4.6",
+    "nodemailer": "^7.0.6",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
+    "react-hot-toast": "^2.6.0",
     "react-icons": "^5.5.0",
     "vite-tsconfig-paths": "^5.1.4"
   },
   "devDependencies": {
     "@eslint/js": "^9.33.0",
+    "@types/nodemailer": "^7.0.1",
     "@types/react": "^19.1.10",
     "@types/react-dom": "^19.1.7",
     "@typescript-eslint/eslint-plugin": "^8.42.0",
