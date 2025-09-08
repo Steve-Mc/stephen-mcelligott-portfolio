@@ -16,20 +16,19 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, im
   return (
     <MotionCard
       maxW="100%"
-      borderRadius={"xl"}
+      borderRadius="xl"
       initial={{
         opacity: 0,
-        y: 50,
-        scale: 0.95,
-        filter: "drop-shadow(0 0 0px teal)",
+        y: 20,
+        scale: 0.98,
       }}
       whileInView={{ opacity: 1, y: 0, scale: 1 }}
       viewport={{ once: true }}
-      transition={{ duration: 1.2, ease: "easeOut" }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
       whileHover={{
-        scale: 1.05,
-        filter: "drop-shadow(0 0 12px teal)",
-        transition: { type: "spring", stiffness: 400, damping: 20 },
+        scale: 1.02,
+        boxShadow: "0 6px 16px rgba(0, 0, 0, 0.1)", // subtle soft shadow
+        transition: { duration: 0.25, ease: "easeOut" },
       }}
     >
       <Image src={image} alt={title} borderTopRadius={"xl"} />

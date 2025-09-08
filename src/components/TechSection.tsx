@@ -27,7 +27,7 @@ export const TechSection: React.FC<TechSectionProps> = ({ title, techs }) => (
             filter: "drop-shadow(0 0 0px teal)",
           }}
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
-          transition={{ duration: 1.2, ease: "easeOut" }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
           viewport={{ once: true, amount: 0.1 }}
           whileHover={{
             scale: 1.1,

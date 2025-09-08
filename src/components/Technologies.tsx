@@ -13,7 +13,7 @@ export const Technologies: React.FC = () => (
     gap={16}
     initial={{ opacity: 0, y: 50, scale: 0.95 }}
     whileInView={{ opacity: 1, y: 0, scale: 1 }}
-    transition={{ duration: 1.2, ease: "easeOut" }}
+    transition={{ duration: 0.5, ease: "easeOut" }}
     viewport={{ once: true, amount: 0.1 }}
   >
     <Box>
